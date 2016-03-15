@@ -9,9 +9,9 @@ class Post(models.Model):
     yaratilis_tarihi=models.DateTimeField(default=timezone.now)
     yayinlama_tarihi=models.DateTimeField(blank=True, null=True)
 
-def yayinla(self):
-    self.yayinlama_tarihi=timezone.now()
-    self.save()
+    def yayinla(self):
+        self.yayinlama_tarihi=timezone.now()
+        self.save()
 
-def __str__(self):
-    return self.baslik
+    def __str__(self):
+        return self.baslik
